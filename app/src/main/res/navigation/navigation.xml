@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/formulariFragment">
+
+    <fragment
+        android:id="@+id/formulariFragment"
+        android:name="com.enaitzdam.examenuf1.FormulariFragment"
+        android:label="FormulariFragment"
+        >
+        <action
+            android:id="@+id/action_formulariFragment_to_llistatFragment"
+            app:destination="@id/llistatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/llistatFragment"
+        android:name="com.enaitzdam.examenuf1.LlistatFragment"
+        android:label="LlistatFragment" >
+        <action
+            android:id="@+id/action_llistatFragment_to_finalFragment"
+            app:destination="@id/finalFragment"
+            app:popUpTo="@id/formulariFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalFragment"
+        android:name="com.enaitzdam.examenuf1.FinalFragment"
+        android:label="FinalFragment" />
+</navigation>
