@@ -10,6 +10,8 @@ class SharedViewModel : ViewModel() {
     lateinit var alumneTriat:Alumne
     lateinit var admin:String
 
+
+
     fun addLlistatAlumne(nom: String, edat: Int, adrec: String, historial: String) {
         alumnesLlistat.add(Alumne(nom, edat, adrec, historial))
     }

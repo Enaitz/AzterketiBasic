@@ -53,7 +53,7 @@ class AlumnesAdapter(
             holder.adrecaAlumne.text=item.adreca
         }
         if (item != null) {
-            holder.historialAlumne.text=item.Historial
+            holder.historialAlumne.text=item.historial
         }
         holder.itemView.setOnClickListener{
             if (item != null) {
