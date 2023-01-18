@@ -1,0 +1,52 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "b626adc54dfbc27b7121cef518167cb5",
+    "entities": [
+      {
+        "tableName": "alumnes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`Nom` TEXT NOT NULL, `Edat` INTEGER NOT NULL, `Adreca` TEXT NOT NULL, `Historial` TEXT NOT NULL, PRIMARY KEY(`Nom`))",
+        "fields": [
+          {
+            "fieldPath": "nom",
+            "columnName": "Nom",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "edat",
+            "columnName": "Edat",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "adreca",
+            "columnName": "Adreca",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "historial",
+            "columnName": "Historial",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "Nom"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b626adc54dfbc27b7121cef518167cb5')"
+    ]
+  }
+}
